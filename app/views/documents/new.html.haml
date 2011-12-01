@@ -1,7 +1,8 @@
-= form_tag '/documents/upload', :multipart => true do |f| 
-  %h2
-    CHOOSE A FILE AND HIT UPLOAD!
-  = file_field_tag 'document_file', :accept => 'application/pdf'
-  = submit_tag 'UPLOAD'
+#upload_form
+  = form_tag '/documents/upload', :multipart => true do |f| 
+    %h2
+      CHOOSE A PDF DOCUMENT AND HIT UPLOAD!
+    = file_field_tag 'document_file', :accept => 'application/pdf'
+    = submit_tag 'UPLOAD'
 
 

@@ -3,3 +3,16 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+#upload_form {
+  input#document_file {
+    width: 340px;
+  }
+
+  input {
+    color: #606060;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.0em;
+  }
+}
