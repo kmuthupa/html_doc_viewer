@@ -12,7 +12,12 @@ class DocumentsController < ApplicationController
       end
       save_file.close
       
-      # upload the file to conversion service
+      # upload the file to the sinatra conversion service
+      begin
+        RestClient.post "http://172.16.240.134:4567/#{File.basename(save_file.path)}", :data => File.new("#{save_file.path}") 
+      rescue
+        raise 'conversion service is unavailable at the moment!'
+      end
     end
     respond_to do |format|
       format.html {render :action => 'result'}
