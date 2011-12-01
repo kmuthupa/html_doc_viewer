@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %title HTML based document viewer
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+    = csrf_meta_tag
+  %body.one_col
+    #container
+      .clear
+      #content
+        - flash.each do |name, msg|
+          = content_tag :div, msg, :id => "flash_#{name}" unless msg.blank?
+        = yield
+     
