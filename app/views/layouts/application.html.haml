@@ -6,10 +6,13 @@
     = javascript_include_tag 'application'
     = csrf_meta_tag
   %body
+    #header
+      %h1 A HTML BASED DOCUMENT VIEWER. TRY IT BELOW!
     #container
       .clear
       #content
         - flash.each do |name, msg|
           = content_tag :div, msg, :id => "flash_#{name}" unless msg.blank?
         = yield
+
      

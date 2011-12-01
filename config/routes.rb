@@ -1,5 +1,11 @@
 HtmlDocViewer::Application.routes.draw do
   root :to => 'documents#new'
+  
+  resources :documents do
+    collection do
+      post 'upload'
+    end
+  end
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

@@ -1,0 +1,7 @@
+= form_tag '/documents/upload', :remote => true, :html => { :multipart => true, :id => "upload_form" } do |f| 
+  %h2
+    CHOOSE A FILE AND HIT UPLOAD!
+  = file_field_tag 'document_file', :accept => 'application/pdf'
+  = submit_tag 'UPLOAD'
+
+
