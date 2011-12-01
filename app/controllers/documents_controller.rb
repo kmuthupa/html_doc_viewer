@@ -3,8 +3,10 @@ class DocumentsController < ApplicationController
   end
   
   def upload
-    unless params[:document_file].nil?
-      file_content = File.read(params[:document_file].tempfile)
+    if params[:document_file] && File.exists?(params[:document_file].tempfile)
+      File.open(params[:document_file].tempfile, 'r') do |f|
+        file_content = f.read
+      end
     end
     respond_to do |format|
       format.html {render :action => 'result'}
