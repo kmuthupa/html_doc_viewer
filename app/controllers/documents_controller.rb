@@ -1,6 +1,7 @@
 class DocumentsController < ApplicationController
+  before_filter :clear_flash
+  
   def new
-    flash.clear
   end
   
   def upload
@@ -41,5 +42,11 @@ class DocumentsController < ApplicationController
   def display
     @link_to_html = params[:html_source].gsub('.pdf', '.html')
     @doc_name = params[:doc_name]
+  end
+  
+  private
+  
+  def clear_flash
+    flash.clear
   end
 end
