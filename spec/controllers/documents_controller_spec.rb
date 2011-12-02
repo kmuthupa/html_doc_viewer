@@ -14,7 +14,7 @@ describe DocumentsController do
   end
   
   it 'return the document display page with success' do
-    get :display
+    get :display, {:doc_name => 'test.pdf', :html_source => '/some_uid/test.pdf'}
     response.should be_success
     response.should render_template(:display)
   end

@@ -14,12 +14,16 @@ class DocumentsController < ApplicationController
       save_file_name = File.basename(save_file.path)
       # upload the file to the sinatra conversion service
       begin
-        @conversion_response = RestClient.post "http://172.16.240.136:4567/#{save_file_name}", :data => File.new("#{save_file.path}")       
+        @conversion_response = RestClient.post "#{CONVERSION_SERVER}/#{save_file_name}", :data => File.new("#{save_file.path}")       
+        if @conversion_response.code == 200
+          @doc_name = save_file_name 
+          #@html_source = @conversion_response.body if @conversion_response.respond_to?(:body)
+          @link_to_html = @conversion_response.body.gsub('.pdf', '.html') if @conversion_response.respond_to?(:body)
+        end
       rescue
         raise 'conversion service is unavailable at the moment!'
       end
     end
-    @doc_name = save_file_name if @conversion_response.code == 200
     respond_to do |format|
       format.html {render :action => 'result'}
     end
@@ -29,5 +33,7 @@ class DocumentsController < ApplicationController
   end
   
   def display
+    @link_to_html = params[:html_source].gsub('.pdf', '.html')
+    @doc_name = params[:doc_name]
   end
 end

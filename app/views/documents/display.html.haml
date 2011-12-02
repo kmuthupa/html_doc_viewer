@@ -1,1 +1,4 @@
 #doc_display
+  %h3= "HTMLized #{@doc_name} displayed here."
+  %br 
+  %iframe{:src => "#{CONVERSION_SERVER}#{@link_to_html}", :width => "80%", :height => "700"}

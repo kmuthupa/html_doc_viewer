@@ -6,7 +6,7 @@
       %br
       %h3 
         Click 
-        = link_to 'here', display_documents_url(:doc_name => @doc_name)
+        = link_to 'here', "#{CONVERSION_SERVER}#{@link_to_html}"
         to view the uploaded file in html form.
   - else
     #boo_result
