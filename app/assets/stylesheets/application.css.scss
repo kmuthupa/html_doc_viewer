@@ -27,6 +27,11 @@ body {
     position: relative;
     min-height: 100%;
     clear: left;
+    #flash_bar {
+      font-size: 1.25em;
+      color: red;
+      margin: 20px;
+    }
   }
 
   #content h2 {	

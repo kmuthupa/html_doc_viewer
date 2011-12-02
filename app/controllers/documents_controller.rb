@@ -1,5 +1,6 @@
 class DocumentsController < ApplicationController
   def new
+    flash.clear
   end
   
   def upload
@@ -23,9 +24,14 @@ class DocumentsController < ApplicationController
       rescue
         raise 'conversion service is unavailable at the moment!'
       end
-    end
-    respond_to do |format|
-      format.html {render :action => 'result'}
+      respond_to do |format|
+        format.html {render 'result'}
+      end
+    else
+      flash[:error] = 'No file was chosen!'
+      respond_to do |format|
+        format.html {render 'new'}
+      end
     end
   end
   

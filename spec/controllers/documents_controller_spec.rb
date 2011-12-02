@@ -27,6 +27,13 @@ describe DocumentsController do
       end
     end
     
+    it 'should not upload or process without a file to the server' do
+      post :upload
+      response.should be_success
+      response.should render_template(:new)
+      assigns(:doc_name).should be_nil
+    end
+    
     it 'should upload a file to the server with success and process it successfully' do
       RestClient.stub!(:post).and_return(StubResponse.new(200)) if STUB_CONVERSION
       post :upload, {:document_file => @test_document}

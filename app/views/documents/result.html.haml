@@ -1,8 +1,8 @@
 #result
   - if @conversion_response.code == 200
     #yay_result
-      = image_tag 'yay.gif', :size => '250x250'
-      %h2 Your file was successfully uploaded and is being processed!
+      = image_tag 'yay.gif', :size => '300x250'
+      %h2 Your file was successfully uploaded and processed!
       %br
       %h3 
         Click 
@@ -10,6 +10,6 @@
         to view the uploaded file in html form.
   - else
     #boo_result
-      = image_tag 'oh_no.jpg'
+      = image_tag 'oops.jpg', :size => '300x250'
       %h2 Sorry! There was a problem processing the file you uploaded.
 
