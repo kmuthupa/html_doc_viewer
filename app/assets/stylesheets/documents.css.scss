@@ -5,6 +5,12 @@
 }
 
 #upload_form {
+  padding: 20px;
+  width: 60%;
+  height: 125px;  
+  border: solid 1px #606060;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
   input#document_file {
     width: 340px;
   }
