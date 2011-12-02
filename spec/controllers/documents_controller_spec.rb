@@ -13,12 +13,43 @@ describe DocumentsController do
     response.should render_template(:result)
   end
   
-  it 'should upload a file to the server with success' do
-    @test_document = fixture_file_upload('/test.pdf', 'application/pdf')
-    class << @test_document #hack to simulate the file upload action
-       attr_reader :tempfile
-    end
-    post :upload, {:document_file => @test_document}
+  it 'return the document display page with success' do
+    get :display
     response.should be_success
+    response.should render_template(:display)
+  end
+  
+  describe 'upload' do
+    before(:each) do
+      @test_document = fixture_file_upload('/test.pdf', 'application/pdf')
+      class << @test_document #hack to simulate the file upload action
+         attr_reader :tempfile
+      end
+    end
+    
+    it 'should upload a file to the server with success and process it successfully' do
+      RestClient.stub!(:post).and_return(StubResponse.new(200)) if STUB_CONVERSION
+      post :upload, {:document_file => @test_document}
+      response.should be_success
+      response.should render_template(:result)
+      assigns(:doc_name).should == 'test.pdf'
+      assigns(:conversion_response).code.should == 200
+    end
+    
+    it 'should upload a file to the server with success and fail processing it' do
+      RestClient.stub!(:post).and_return(StubResponse.new(500))
+      post :upload, {:document_file => @test_document}
+      response.should be_success
+      response.should render_template(:result)
+      assigns(:doc_name).should be_nil
+      assigns(:conversion_response).code.should == 500
+    end
+  end
+end
+
+class StubResponse
+  attr_reader :code
+  def initialize(resp_code)
+    @code = resp_code
   end
 end

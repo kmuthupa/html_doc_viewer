@@ -1,10 +1,15 @@
-#yay_result
-  = image_tag 'yay.gif', :size => '250x250'
-%h2 Your file was successfully uploaded and is being processed!
-%br
-%h3 
-  Click 
-  = link_to 'here', ''
-  to view the uploaded file in html form.
- 
+#result
+  - if @conversion_response.code == 200
+    #yay_result
+      = image_tag 'yay.gif', :size => '250x250'
+      %h2 Your file was successfully uploaded and is being processed!
+      %br
+      %h3 
+        Click 
+        = link_to 'here', display_documents_url(:doc_name => @doc_name)
+        to view the uploaded file in html form.
+  - else
+    #boo_result
+      = image_tag 'oh_no.jpg'
+      %h2 Sorry! There was a problem processing the file you uploaded.
 

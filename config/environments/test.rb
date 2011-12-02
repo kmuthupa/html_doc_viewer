@@ -36,4 +36,7 @@ HtmlDocViewer::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+  
+  # switch flag for real conversion service vs stub
+  STUB_CONVERSION = true
 end
