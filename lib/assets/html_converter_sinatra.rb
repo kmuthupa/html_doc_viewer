@@ -1,3 +1,4 @@
+require 'rubygems'
 require 'sinatra'
 require 'fileutils'
 require 'uuidtools'
@@ -17,7 +18,13 @@ post '/:filename' do
   
   # invoke pdftohtml to convert the pdf to html
   begin
+    # convert using pdftohtml
     `/home/kmuthupa/projects/pdftohtml-2/utils/pdftohtml -c -linksOutGoToNewWindow -cropbox -fmt jpg -dpi 16 -zoom 24 -scale 0.0416666666666667 -embedfonts -extractfonts "#{filename}"`
+    # run font conversion
+    `mv "#{save_dir}/fonts" "#{save_dir}/fonts_tmp"`
+    `mkdir "#{save_dir}/fonts"`
+    `/home/kmuthupa/projects/pdftohtml-2/utils/fontConvert.py "#{save_dir}/fonts_tmp" "#{save_dir}/fonts"` 
+    `rm -rf "#{save_dir}/fonts_tmp"`  
     # send success response back to client
     [200, "/#{unique_id}/#{params[:filename]}"]
   rescue
