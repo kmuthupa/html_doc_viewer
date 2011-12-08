@@ -18,9 +18,12 @@ class DocumentsController < ApplicationController
       begin
         @conversion_response = RestClient.post "#{CONVERSION_SERVER}/#{save_file_name}", :data => File.new("#{save_file.path}")       
         if @conversion_response.code == 200
-          @doc_name = save_file_name 
-          #@html_source = @conversion_response.body if @conversion_response.respond_to?(:body)
-          @link_to_html = @conversion_response.body.gsub('.pdf', '.html') if @conversion_response.respond_to?(:body)
+          @doc_name = save_file_name
+          if @conversion_response.respond_to?(:body)
+            resp = @conversion_response.body.split(':')
+            @loc = resp[0]
+            @pages = resp[1]
+          end
         end
       rescue Exception => ex
         raise "The conversion service is unavailable or not responding at the moment! Exception info: #{ex.message} #{ex.backtrace.inspect}"
@@ -40,8 +43,9 @@ class DocumentsController < ApplicationController
   end
   
   def display
-    @link_to_html = params[:html_source].gsub('.pdf', '.html')
-    @doc_name = params[:doc_name]
+    @doc_name = params[:doc_name].gsub('.pdf', '')
+    @loc = params[:loc]
+    @pages = params[:pages].to_i
   end
   
   private

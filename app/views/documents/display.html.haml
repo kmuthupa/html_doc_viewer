@@ -1,4 +1,9 @@
 #doc_display
-  %h3= "HTMLized #{@doc_name} displayed here."
-  %br 
-  %iframe{:src => "#{CONVERSION_SERVER}#{@link_to_html}", :width => "80%", :height => "700"}
+  %h3= "The HTMLized document is displayed here."
+  #pages
+    %ul
+      = @pages.times do |p|
+        %li
+          = link_to("Page-#{p + 1}", "#{CONVERSION_SERVER}/#{@loc}/#{@doc_name}-#{p + 1}.html")
+  #doc_container
+  

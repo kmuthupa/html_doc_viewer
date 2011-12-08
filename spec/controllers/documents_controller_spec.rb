@@ -14,9 +14,12 @@ describe DocumentsController do
   end
   
   it 'return the document display page with success' do
-    get :display, {:doc_name => 'test.pdf', :html_source => '/some_uid/test.pdf'}
+    get :display, {:doc_name => 'test.pdf', :pages => '4', :loc => '1ef18bea-2d6f-408e-a742-3ddbd8c1d69e'}
     response.should be_success
     response.should render_template(:display)
+    assigns(:doc_name).should == 'test'
+    assigns(:pages).should == 4
+    assigns(:loc).should == '1ef18bea-2d6f-408e-a742-3ddbd8c1d69e'
   end
   
   describe 'upload' do
@@ -41,6 +44,8 @@ describe DocumentsController do
       response.should render_template(:result)
       assigns(:doc_name).should == 'test.pdf'
       assigns(:conversion_response).code.should == 200
+      assigns(:pages).should_not be_nil
+      assigns(:loc).should_not be_nil
     end
     
     it 'should upload a file to the server with success and fail processing it' do
@@ -50,6 +55,8 @@ describe DocumentsController do
       response.should render_template(:result)
       assigns(:doc_name).should be_nil
       assigns(:conversion_response).code.should == 500
+      assigns(:pages).should be_nil
+      assigns(:loc).should be_nil
     end
     
     describe 'upload of file with spaced file name' do

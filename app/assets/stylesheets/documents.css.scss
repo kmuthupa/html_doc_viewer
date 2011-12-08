@@ -4,6 +4,17 @@
   margin-right: auto;
 }
 
+#doc_display {
+  font-size: 1.0 em;
+  #pages {
+    li {
+      list-style: none;
+      display: inline;
+      padding-right: 10px; 
+    }
+  }
+}
+
 #upload_form {
   padding: 20px;
   width: 60%;
@@ -14,7 +25,6 @@
   input#document_file {
     width: 340px;
   }
-
   input {
     color: #606060;
     padding-left: 20px;
