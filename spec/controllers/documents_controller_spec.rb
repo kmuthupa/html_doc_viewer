@@ -22,6 +22,11 @@ describe DocumentsController do
     assigns(:loc).should == '1ef18bea-2d6f-408e-a742-3ddbd8c1d69e'
   end
   
+  it 'fetches the page using the URL with success' do
+    get :fetch, {:fetch_url => 'http://test.host/422.html'}
+    response.should be_success
+  end
+  
   describe 'upload' do
     before(:each) do
       @test_document = fixture_file_upload('/test.pdf', 'application/pdf')
@@ -44,8 +49,6 @@ describe DocumentsController do
       response.should render_template(:result)
       assigns(:doc_name).should == 'test.pdf'
       assigns(:conversion_response).code.should == 200
-      assigns(:pages).should_not be_nil
-      assigns(:loc).should_not be_nil
     end
     
     it 'should upload a file to the server with success and fail processing it' do

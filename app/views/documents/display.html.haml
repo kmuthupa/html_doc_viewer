@@ -2,8 +2,12 @@
   %h3= "The HTMLized document is displayed here."
   #pages
     %ul
-      = @pages.times do |p|
+      - for p in (1..@pages)
         %li
-          = link_to("Page-#{p + 1}", "#{CONVERSION_SERVER}/#{@loc}/#{@doc_name}-#{p + 1}.html")
+          = link_to "Page-#{p}", "javascript:void", :id => "page_link_#{p}", :class => "page_link", :url => "#{fetch_documents_url}?fetch_url=#{CONVERSION_SERVER}/#{@loc}/#{@doc_name}-#{p}.html"
   #doc_container
+    #spinner
+      = image_tag "ajax_spinner.gif"
+    #document
+
   

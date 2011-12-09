@@ -6,6 +6,7 @@ HtmlDocViewer::Application.routes.draw do
       post 'upload'
       get 'result'
       get 'display'
+      get 'fetch'
     end
   end
 

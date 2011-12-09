@@ -1,5 +1,6 @@
 class DocumentsController < ApplicationController
   before_filter :clear_flash
+  layout 'application', :only => [:new, :upload, :result, :display]
   
   def new
   end
@@ -46,6 +47,14 @@ class DocumentsController < ApplicationController
     @doc_name = params[:doc_name].gsub('.pdf', '')
     @loc = params[:loc]
     @pages = params[:pages].to_i
+  end
+  
+  def fetch
+    begin 
+      @resp = RestClient.get params[:fetch_url] 
+    rescue 
+      @resp = '' 
+    end
   end
   
   private
