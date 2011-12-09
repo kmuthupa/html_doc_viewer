@@ -8,6 +8,7 @@ gem 'rest-client'
 
 group :development do
   gem "rspec-rails", "~> 2.6"
+  gem "active_reload"
 end
 
 # Gems used only for assets and not required
