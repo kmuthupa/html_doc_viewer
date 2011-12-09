@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function() {	
   if ($('#page_link_1') != undefined) {
 	url = $('#page_link_1').attr('url');
 	loadPage(url);
@@ -12,6 +12,7 @@ $(document).ready(function() {
 
 var loadPage = function (page_url) {
 	$('#spinner').show();
+	$('#document').html('');
 	$('#document').load(page_url, function() {
 		$('#spinner').hide();
 	});
