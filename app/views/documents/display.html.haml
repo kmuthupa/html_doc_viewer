@@ -1,5 +1,6 @@
 #doc_display
-  %h3= "The HTMLized document is displayed here."
+  %span{:id => 'link_back'}
+    = link_to 'Upload another document', root_url
   #pages
     %ul
       - for p in (1..@pages)
