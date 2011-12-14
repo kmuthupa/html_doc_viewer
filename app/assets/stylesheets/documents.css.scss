@@ -22,12 +22,16 @@
     }
     -moz-border-radius: 10px;
     border-radius: 10px;
-    border: solid 2px #606060;
+    border: solid 3px #e1eae6;
     padding: 20px;
     margin: 10px;
     overflow: scroll;
     height: 600px;
     width: 75%;
+   #document {
+    margin: 25px;
+    border: solid 1px #606060;
+   }
   }
 }
 
@@ -35,7 +39,7 @@
   padding: 20px;
   width: 60%;
   height: 125px;  
-  border: solid 1px #606060;
+  border: solid 3px #e1eae6;
   -moz-border-radius: 10px;
   border-radius: 10px;
   input#document_file {
