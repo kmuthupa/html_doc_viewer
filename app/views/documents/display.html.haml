@@ -1,11 +1,19 @@
 #doc_display
   %span{:id => 'link_back'}
     = link_to 'Upload another document', root_url
-  #pages
+  #toolbar
     %ul
       - for p in (1..@pages)
         %li
           = link_to "Page-#{p}", "javascript:void", :id => "page_link_#{p}", :class => "page_link", :url => "#{fetch_documents_url}?fetch_url=#{CONVERSION_SERVER}/#{@loc}/#{@doc_name}-#{p}.html"
+      %li
+        = link_to image_tag("prev_page.png", :id => 'prev_page', :size => '30x30')
+      %li
+        = link_to image_tag("next_page.png", :id => 'next_page', :size => '30x30')
+      %li
+        = link_to image_tag("zoom_in.png", :id => 'zoom_in', :size => '30x30')
+      %li
+        = link_to image_tag("zoom_out.png", :id => 'zoom_out', :size => '30x30')
   #doc_container
     #spinner
       = image_tag "ajax_spinner.gif"

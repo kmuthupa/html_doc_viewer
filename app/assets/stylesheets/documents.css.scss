@@ -6,7 +6,13 @@
 
 #doc_display {
   span#link_back { font-size: 1.5em; }
-  #pages {
+  #toolbar {
+    margin: 5px;
+    padding: 2px;
+    background: #e1eae6;
+    width: 79%;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     li {
       list-style: none;
       display: inline;
@@ -26,7 +32,7 @@
     padding: 20px;
     margin: 10px;
     overflow: scroll;
-    height: 600px;
+    height: 750px;
     width: 75%;
    #document {
     margin: 25px;
