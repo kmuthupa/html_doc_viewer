@@ -1,5 +1,5 @@
 #result
-  - if @conversion_response.code == 200
+  - if @conversion_response.try(:code) == 200
     #yay_result
       = image_tag 'yay.gif', :size => '300x250'
       %h2 Your file was successfully uploaded and processed!

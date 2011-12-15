@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe DocumentsController do
+  render_views
+  
   it 'return a new upload page with success' do
     get :new
     response.should be_success
@@ -17,8 +19,19 @@ describe DocumentsController do
     get :display, {:doc_name => 'test.pdf', :pages => '4', :loc => '1ef18bea-2d6f-408e-a742-3ddbd8c1d69e'}
     response.should be_success
     response.should render_template(:display)
+    response.body.include?('Jump to Page').should be_true
     assigns(:doc_name).should == 'test'
     assigns(:pages).should == 4
+    assigns(:loc).should == '1ef18bea-2d6f-408e-a742-3ddbd8c1d69e'
+  end
+  
+  it 'return the document display page with exception' do
+    get :display, {:doc_name => 'test.pdf', :pages => '0', :loc => '1ef18bea-2d6f-408e-a742-3ddbd8c1d69e'}
+    response.should be_success
+    response.should render_template(:display)
+    response.body.include?('Sorry').should be_true
+    assigns(:doc_name).should == 'test'
+    assigns(:pages).should == 0
     assigns(:loc).should == '1ef18bea-2d6f-408e-a742-3ddbd8c1d69e'
   end
   

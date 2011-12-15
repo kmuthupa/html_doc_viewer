@@ -1,26 +1,30 @@
 #doc_display
   %span{:id => 'link_back'}
     = link_to 'Upload another document', root_url
-  #toolbar
-    %ul
-      %li
-        Jump to Page:
-        %select{:id => 'page_select'}
-          - for p in (1..@pages)
-            %option{:value => "#{fetch_documents_url}?fetch_url=#{CONVERSION_SERVER}/#{@loc}/#{@doc_name}-#{p}.html"}
-              = "#{p}"  
-      %li
-        = link_to image_tag("prev_page.png", :id => 'prev_page', :size => '30x30'), 'javascript:void'
-      %li
-        = link_to image_tag("next_page.png", :id => 'next_page', :size => '30x30'), 'javascript:void'
-      %li
-        = link_to image_tag("zoom_in.png", :id => 'zoom_in', :size => '30x30'), 'javascript:void'
-      %li
-        = link_to image_tag("zoom_out.png", :id => 'zoom_out', :size => '30x30'), 'javascript:void'
-  #doc_container
-    #spinner
-      = image_tag "ajax_spinner.gif"
-      %h2 LOADING..
-    #document
+  - if @loc.blank? || @pages == 0 || @pages.blank?
+    #exception
+      Sorry. There is a problem displaying this document!
+  - else
+    #toolbar
+      %ul
+        %li
+          Jump to Page:
+          %select{:id => 'page_select'}
+            - for p in (1..@pages)
+              %option{:value => "#{fetch_documents_url}?fetch_url=#{CONVERSION_SERVER}/#{@loc}/#{@doc_name}-#{p}.html"}
+                = "#{p}"  
+        %li
+          = link_to image_tag("prev_page.png", :id => 'prev_page', :size => '30x30'), 'javascript:void'
+        %li
+          = link_to image_tag("next_page.png", :id => 'next_page', :size => '30x30'), 'javascript:void'
+        %li
+          = link_to image_tag("zoom_in.png", :id => 'zoom_in', :size => '30x30'), 'javascript:void'
+        %li
+          = link_to image_tag("zoom_out.png", :id => 'zoom_out', :size => '30x30'), 'javascript:void'
+    #doc_container
+      #spinner
+        = image_tag "ajax_spinner.gif"
+        %h2 LOADING..
+      #document
 
   
