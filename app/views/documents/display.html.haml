@@ -3,9 +3,12 @@
     = link_to 'Upload another document', root_url
   #toolbar
     %ul
-      - for p in (1..@pages)
-        %li
-          = link_to "Page-#{p}", "javascript:void", :id => "page_link_#{p}", :class => "page_link", :url => "#{fetch_documents_url}?fetch_url=#{CONVERSION_SERVER}/#{@loc}/#{@doc_name}-#{p}.html"
+      %li
+        Jump to Page:
+        %select
+          - for p in (1..@pages)
+            %option
+              = link_to "#{p}", "javascript:void", :id => "page_link_#{p}", :class => "page_link", :url => "#{fetch_documents_url}?fetch_url=#{CONVERSION_SERVER}/#{@loc}/#{@doc_name}-#{p}.html"
       %li
         = link_to image_tag("prev_page.png", :id => 'prev_page', :size => '30x30')
       %li
