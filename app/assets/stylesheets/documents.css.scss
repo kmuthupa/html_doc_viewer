@@ -65,32 +65,9 @@
   }
 }
 
-
-/****************************Generic CSS************************************************************/
-
 .float_left{float:left}
 .float_right{float:right}
 .clear{overflow:hidden}
-
-
-/**********************************Core Styling***********************************/
-#tool_bar{z-index:2000;min-width:700px;position:relative;background-color:#F2F2F2;border-bottom: 1px solid #999;padding:0 10px}
-
-#doc_container{overflow-y: auto;
-position: absolute;
-top: 29px;
-bottom: 0;
-left: 0;
-right: 0;width:100%;margin:0 auto}
-.outer_page{margin:0px auto 3% auto;width:80%; border:1px solid #F2F2F2;}
-
-#document{width:60em}
-
-#zoom_elements,#zoom_page{margin-top:13px;}
-
-#document_title{text-align:center; width:50%; font-family:Georgia;font-weight:400; letter-spacing:-1px}
-#heading_title{text-align:center; font-family:Georgia;font-weight:400; letter-spacing:-1px}
-/**********************************Core Styling***************************************/
 
 .zoom_1{-moz-transform:scale(0.5);-webkit-transform:scale(0.5);-ms-transform:scale(0.5);-o-transform:scale(0.5); margin:-18% auto 0;}
 
@@ -105,24 +82,3 @@ right: 0;width:100%;margin:0 auto}
 .zoom_6{-moz-transform:scale(2);-webkit-transform:scale(2);-ms-transform:scale(2);-o-transform:scale(2);margin:43% auto 0}
 
 
-/*******App styling**********/
-
-#engine_description{width:70%; margin:50px auto;border:1px solid #EEE; padding:20px 10px;-webkit-border-radius:15px;-moz-border-radius:15px;-webkit-box-shadow:0 0 5px #F2F2F2;-moz-box-shadow:0 0 5px #F2F2F2; background-color:#EFEFEF; text-align: center}
-#engine_description h3{text-align:center; font-weight:400;color:#666;margin-bottom:20px}
-#document_file{border:none}
-#upload{background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5A5A5A), color-stop(0.5, #242424) ,to(#000000)); color;#FFF;padding:6px 12px; -webkit-border-radius:5px;-moz-border-radius:5px; display:inline-block;color:#FFF; font-weight:700}
-
-.small_text{font-size:0.9em;color:#999}
-
-#engine_description #success{color:#000}
-#navigate{width:12%; float: left;margin:5px 0 0 15px}
-#navigate a,#zoom_page a{ height:30px;width:30px;background-repeat:no-repeat;background-position:0 45%;display:inline-block;margin:0 10px}
-
-/*
-#previous_page{background-image:url(../images/prev_page.png)}
-#next_page{background-image:url(../images/next_page.png)}*/
-
-#zoomin{background-image:url(../images/zoom_in.png)}
-#zoomout{background-image:url(../images/zoom_out.png)}
-#navigate p,#zoom_page p{margin-top:5px}
-#zoom_page{width:12%}
