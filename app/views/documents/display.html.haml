@@ -18,13 +18,13 @@
         %li
           = link_to image_tag("next_page.png", :id => 'next_page', :size => '30x30'), 'javascript:void'
         %li
-          = link_to image_tag("zoom_in.png", :id => 'zoom_in', :size => '30x30'), 'javascript:void'
+          = link_to image_tag("zoom_in.png", :id => 'zoomin', :size => '30x30'), 'javascript:void'
         %li
-          = link_to image_tag("zoom_out.png", :id => 'zoom_out', :size => '30x30'), 'javascript:void'
+          = link_to image_tag("zoom_out.png", :id => 'zoomout', :size => '30x30'), 'javascript:void'
     #doc_container
       #spinner
         = image_tag "ajax_spinner.gif"
         %h2 LOADING..
-      #document
+      #document{:class => "zoom_3"}
 
   

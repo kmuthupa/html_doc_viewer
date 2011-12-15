@@ -23,6 +23,63 @@ $(document).ready(function() {
 	url = next.attr('value');
     loadPageAndSetSelect(url);
   }); 
+  
+  
+  /***Zoom function*****/
+  
+  
+  
+
+
+
+$('#zoomin').on('click',function() {
+
+alert("hi");
+
+var className = $("#document").attr("class").trim().charAt(5);
+
+var zoom_protect=parseInt(className);
+
+if(zoom_protect<=5){
+var zoom_buffer=zoom_protect+1;
+
+var zoom_level=$("#document").attr("class").replace(className,zoom_buffer);
+
+$("#document").removeClass();
+$("#document").addClass(zoom_level);
+
+return false;
+}
+
+
+
+});
+
+$('#zoomout').on('click',function() {
+
+var className = $("#document").attr("class").trim().charAt(5);
+
+var zoom_protect=parseInt(className);
+
+if(zoom_protect>1){
+var zoom_buffer=zoom_protect-1;
+
+var zoom_level=$("#document").attr("class").replace(className,zoom_buffer);
+
+$("#document").removeClass();
+$("#document").addClass(zoom_level);
+
+return false;
+}
+
+
+  /***Zoom function*****/
+
+
+
+
+
+  
 });
 
 
@@ -41,5 +98,13 @@ var loadPage = function (page_url) {
 	$('#document').load(page_url, function() {
 		$('#spinner').hide();
 	});
+	
+	
+	
+	
+	
+	
+	
+	
 }
 
