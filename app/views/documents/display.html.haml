@@ -5,10 +5,10 @@
     %ul
       %li
         Jump to Page:
-        %select
+        %select{:id => 'page_select'}
           - for p in (1..@pages)
-            %option
-              = link_to "#{p}", "javascript:void", :id => "page_link_#{p}", :class => "page_link", :url => "#{fetch_documents_url}?fetch_url=#{CONVERSION_SERVER}/#{@loc}/#{@doc_name}-#{p}.html"
+            %option{:id => "page_link_#{p}", :class => 'page_link', :value => "#{fetch_documents_url}?fetch_url=#{CONVERSION_SERVER}/#{@loc}/#{@doc_name}-#{p}.html"}
+              = "#{p}"  
       %li
         = link_to image_tag("prev_page.png", :id => 'prev_page', :size => '30x30')
       %li

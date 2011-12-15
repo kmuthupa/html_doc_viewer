@@ -1,11 +1,11 @@
 $(document).ready(function() {	
   if ($('#page_link_1') != undefined) {
-	url = $('#page_link_1').attr('url');
+	url = $('#page_link_1').attr('value');
 	loadPage(url);
   }
 
-  $('.page_link').click(function() {
-	url = $(this).attr('url');
+  $('#page_select').change(function() {
+	url = $("#page_select option:selected").attr('value');
 	loadPage(url);
   });
 });
