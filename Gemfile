@@ -5,6 +5,7 @@ gem 'mysql', '2.8.1'
 gem 'haml', '3.1.2'
 gem 'jquery-rails'
 gem 'rest-client'
+gem 'pg'
 
 group :development do
   gem "rspec-rails", "~> 2.6"

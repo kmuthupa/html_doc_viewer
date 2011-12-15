@@ -5,3 +5,4 @@ tmp/
 public/assets/
 .DS_Store
 spec/.DS_Store
+config/database.yml
