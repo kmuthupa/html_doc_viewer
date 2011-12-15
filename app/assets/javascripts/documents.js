@@ -8,6 +8,16 @@ $(document).ready(function() {
 	url = $("#page_select option:selected").attr('value');
 	loadPage(url);
   });
+
+  $('#prev_page').click(function() {
+	
+	
+  });
+
+  $('#next_page').click(function() {
+	
+	
+  }); 
 });
 
 var loadPage = function (page_url) {

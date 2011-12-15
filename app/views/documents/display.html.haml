@@ -5,7 +5,7 @@
     %ul
       %li
         Jump to Page:
-        %select{:id => 'page_select'}
+        %select{:id => 'page_select', :page_count => "#{@pages}"}
           - for p in (1..@pages)
             %option{:id => "page_link_#{p}", :class => 'page_link', :value => "#{fetch_documents_url}?fetch_url=#{CONVERSION_SERVER}/#{@loc}/#{@doc_name}-#{p}.html"}
               = "#{p}"  
