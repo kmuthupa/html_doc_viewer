@@ -26,7 +26,7 @@
 	input[type='text'],input[type='password']{	cursor:text;}
 	input[type='hidden']{	display:none;}
     html{font-size:65.2%;
-    body {line-height:1.6em;font-family:"Lucida Grande",Tahoma,Arial,sans-serif;font-size:1.2em; }}
+    body {line-height:1.6em;font-size:1.2em; }}
 
 /***********************Reset CSS************************/
 
@@ -44,17 +44,17 @@ body {
 
   #header {
     background: #F2F2F2;
-    padding:10px 5px;
+    padding:10px 10px;
+    margin: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
     position:relative;
     border-bottom:1px solid #999;
     
-    h1{font-size:2em;margin:0 0.1em;line-height:1.5em;font-family:Georgia;text-align:center}
+    h1{font-size:2.5em;margin:0 0.1em;line-height:1.5em;text-align:center}
   }
 
   #content {
-   
     width:100%;
     clear: left;
     #flash_bar {

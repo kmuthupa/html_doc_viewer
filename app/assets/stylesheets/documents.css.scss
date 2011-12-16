@@ -1,7 +1,14 @@
 #result {
-  width: 100%;
+  width: 50%;
+  border: solid 3px #e1eae6;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
+  padding: 15px;
+  h2 {font-size: 2.5em;
+      font-weight: bold;}
+  h3 {font-size: 1.75em;}
 }
 
 #doc_display {
@@ -48,19 +55,27 @@
 }
 
 #upload_form {
-  padding: 20px;
-  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 50%;
   height: 125px;  
   border: solid 3px #e1eae6;
   -moz-border-radius: 10px;
   border-radius: 10px;
   input#document_file {
-    width: 340px;
+    width: 300px;
   }
   input {
     color: #606060;
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     font-size: 1.0em;
   }
 }
