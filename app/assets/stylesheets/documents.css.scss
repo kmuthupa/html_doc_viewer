@@ -34,13 +34,6 @@
     }
   }
   #doc_container {
-    #spinner {
-       width: 100%;
-       height: 100%;
-       padding: 0;
-       margin: 0;
-       text-align: center;
-    }
     -moz-border-radius: 10px;
     border-radius: 10px;
     border: solid 3px #333;
@@ -49,7 +42,19 @@
     overflow: auto;
     #document {
       margin: 10px;
-      border: solid 1px #999;
+      .page {
+         .spinner {
+		    width: 100%;
+		    height: 100%;
+		    padding: 0;
+		    margin: 0;
+		    text-align: center;
+		 }
+		 display: none;
+         border: solid 2px #999;
+         margin: 20px;
+         padding: 10px;
+      }
     }
   }
 }
@@ -80,6 +85,7 @@
   }
 }
 
+#page_sink {display: none;}
 .float_left{float:left}
 .float_right{float:right}
 .clear{overflow:hidden}
