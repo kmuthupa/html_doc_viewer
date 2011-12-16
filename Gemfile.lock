@@ -58,7 +58,6 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.17.2)
     multi_json (1.0.4)
-    mysql (2.8.1)
     pg (0.12.0)
       rake-compiler (~> 0.7)
     polyglot (0.3.3)
@@ -137,7 +136,6 @@ DEPENDENCIES
   faker (= 0.3.1)
   haml (= 3.1.2)
   jquery-rails
-  mysql (= 2.8.1)
   pg
   rails (= 3.1.1)
   rest-client

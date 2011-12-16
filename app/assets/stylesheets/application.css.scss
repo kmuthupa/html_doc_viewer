@@ -6,28 +6,53 @@
  *= require_tree . 
 */
 
-body {
-  height: 100%;
-  font-family: Gill Sans, Verdana;
+
+/***********************Modified:: Reset CSS by Eric meyer************************/
+	* { margin: 0; padding: 0; text-decoration: none; font-size: 1em; outline: none;font-weight:inherit; font-style:inherit; font-family:inherit;border:none }
+	/* focusing styles are applied below */
+	:focus{outline:0}
+	body{line-height:1.6em; color:black; background-color:transparent;}
+	ol, ul{list-style:none}
+	sub, sup { vertical-align: baseline; }
+	/* tables still need 'cellspacing="0"' in the markup */
+	table{border-collapse:separate; border-spacing:0}
+	caption, th, td{text-align:left; font-weight:normal}
+	blockquote:before, blockquote:after, 
+	q:before, q:after{content:" "}
+	blockquote, q{quotes:"\201C""\201D""\2018""\2019";color:#666;}
+	blockquote {text-indent: -0.8em;}
+	hr{display:none;}
+	input,select,button{cursor:pointer;}
+	input[type='text'],input[type='password']{	cursor:text;}
+	input[type='hidden']{	display:none;}
+
+/***********************Modified:: Reset CSS by Eric meyer************************/
+
+
+html{font-size:65.2%;
+
+ body {line-height:1.6em;font-family:"Lucida Grande",Tahoma,Arial,sans-serif;font-size:1.2em;
   
   #container {
     margin: 0 30px;
-    background: #fff;
+    background: #FFF;
     height: 100%;
   }
 
   #header {
-    background: #e1eae6;
-    padding: 20px;
-    height: 10%;
+    background: #F2F2F2;
+    padding:10px 5px;
     -moz-border-radius: 10px;
     border-radius: 10px;
+    position:relative;
+    border-bottom:1px solid #999;
+    
+    h1{font-size:2em;margin:0 0.1em;line-height:1.5em;font-family:Georgia;text-align:center}
   }
 
   #content {
-    padding: 20px;
-    position: relative;
-    min-height: 100%;
+   
+    width:100%;
     clear: left;
     #flash_bar {
       font-size: 1.25em;
@@ -49,4 +74,6 @@ body {
     height: 1%;
   }
 }
+}
+
 

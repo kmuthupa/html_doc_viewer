@@ -8,15 +8,20 @@
   span#link_back { font-size: 1.5em; }
   #toolbar {
     margin: 5px;
-    padding: 2px;
-    background: #e1eae6;
-    width: 79%;
+    padding:8px 15px 5px;
+    background: #F2F2F2;
+   
     -moz-border-radius: 5px;
     border-radius: 5px;
     li {
       list-style: none;
       display: inline;
-      padding-right: 30px; 
+      padding: 0 10px;
+    
+       span,
+       #page_select{position:relative;bottom:8px;padding:0 5px}
+       
+      
     }
   }
   #doc_container {
@@ -28,15 +33,17 @@
     }
     -moz-border-radius: 10px;
     border-radius: 10px;
-    border: solid 3px #e1eae6;
+    border: solid 3px #333;
     padding: 20px;
-    margin: 10px;
-    overflow: scroll;
-    height: 750px;
-    width: 75%;
+    margin: 10px auto;
+    overflow: auto;
+    	
+    
+    	
+    
    #document {
-    margin: 25px;
-    border: solid 1px #606060;
+    margin: 10px;
+    border: solid 1px #999;
    }
   }
 }
@@ -58,3 +65,22 @@
     font-size: 1.0em;
   }
 }
+
+
+
+
+
+
+.zoom_1{-moz-transform:scale(0.5);-webkit-transform:scale(0.5);-ms-transform:scale(0.5);-o-transform:scale(0.5); margin:-18% auto 0;}
+
+.zoom_2{-moz-transform:scale(0.57);-webkit-transform:scale(0.75);-ms-transform:scale(0.75);-o-transform:scale(0.75);margin:-7% auto 0;}
+
+.zoom_3{-moz-transform:scale(1);-webkit-transform:scale(1);-ms-transform:scale(1);-o-transform:scale(1);top:10%;bottom:0;left:0;right:0;margin:30px auto}
+
+.zoom_4{-moz-transform:scale(1.5);-webkit-transform:scale(1.5);-ms-transform:scale(1.5);-o-transform:scale(1.5);margin:22% auto 0}
+
+.zoom_5{-moz-transform:scale(1.7);-webkit-transform:scale(1.7);-ms-transform:scale(1.7);-o-transform:scale(1.7);margin:32% auto 0}
+
+.zoom_6{-moz-transform:scale(2);-webkit-transform:scale(2);-ms-transform:scale(2);-o-transform:scale(2);margin:43% auto 0}
+
+

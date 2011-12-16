@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
-gem 'mysql', '2.8.1'
+#gem 'mysql', '2.8.1'
 gem 'haml', '3.1.2'
 gem 'jquery-rails'
 gem 'rest-client'
