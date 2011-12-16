@@ -25,6 +25,7 @@ $(document).ready(function() {
   }); 
   
   
+<<<<<<< HEAD
   
 
   
@@ -34,6 +35,19 @@ $(document).ready(function() {
   $('#zoomin').on('click',function() {
 
 
+=======
+  /***Zoom function*****/
+  
+  
+  
+
+
+
+$('#zoomin').on('click',function() {
+
+alert("hi");
+
+>>>>>>> f59a239dc72e1693fe1a5452231276e6d42e31f2
 var className = $("#document").attr("class").trim().charAt(5);
 
 var zoom_protect=parseInt(className);
@@ -71,6 +85,7 @@ return false;
 }
 
 
+<<<<<<< HEAD
 
 
 });
@@ -80,6 +95,14 @@ return false;
   
   /******Zoom function********/
   
+=======
+  /***Zoom function*****/
+
+
+
+
+
+>>>>>>> f59a239dc72e1693fe1a5452231276e6d42e31f2
   
 });
 
@@ -99,5 +122,13 @@ var loadPage = function (page_url) {
 	$('#document').load(page_url, function() {
 		$('#spinner').hide();
 	});
+	
+	
+	
+	
+	
+	
+	
+	
 }
 

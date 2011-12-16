@@ -6,8 +6,12 @@
  *= require_tree . 
 */
 
+<<<<<<< HEAD
 
 /***********************Modified:: Reset CSS by Eric meyer************************/
+=======
+/***********************Reset CSS by Eric meyer************************/
+>>>>>>> f59a239dc72e1693fe1a5452231276e6d42e31f2
 	* { margin: 0; padding: 0; text-decoration: none; font-size: 1em; outline: none;font-weight:inherit; font-style:inherit; font-family:inherit;border:none }
 	/* focusing styles are applied below */
 	:focus{outline:0}
@@ -26,12 +30,22 @@
 	input[type='text'],input[type='password']{	cursor:text;}
 	input[type='hidden']{	display:none;}
 
+<<<<<<< HEAD
 /***********************Modified:: Reset CSS by Eric meyer************************/
 
 
 html{font-size:65.2%;
 
  body {line-height:1.6em;font-family:"Lucida Grande",Tahoma,Arial,sans-serif;font-size:1.2em;
+=======
+/***********************Reset CSS by Eric meyer************************/
+
+
+
+body {
+  height: 100%;
+  font-family: Gill Sans, Verdana;
+>>>>>>> f59a239dc72e1693fe1a5452231276e6d42e31f2
   
   #container {
     margin: 0 30px;

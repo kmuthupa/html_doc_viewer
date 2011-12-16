@@ -6,6 +6,12 @@
 
 #doc_display {
   span#link_back { font-size: 1.5em; }
+  #exception {
+    margin-top: 15px;
+    padding-top: 10px;
+    font-size: 1.75em; 
+    color: red;
+  }
   #toolbar {
     margin: 5px;
     padding:8px 15px 5px;
@@ -43,7 +49,11 @@
     
    #document {
     margin: 10px;
+<<<<<<< HEAD
     border: solid 1px #999;
+=======
+    border: solid 1px #606060;
+>>>>>>> f59a239dc72e1693fe1a5452231276e6d42e31f2
    }
   }
 }
@@ -66,10 +76,16 @@
   }
 }
 
+<<<<<<< HEAD
 
 
 
 
+=======
+.float_left{float:left}
+.float_right{float:right}
+.clear{overflow:hidden}
+>>>>>>> f59a239dc72e1693fe1a5452231276e6d42e31f2
 
 .zoom_1{-moz-transform:scale(0.5);-webkit-transform:scale(0.5);-ms-transform:scale(0.5);-o-transform:scale(0.5); margin:-18% auto 0;}
 
