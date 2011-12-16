@@ -23,87 +23,45 @@ $(document).ready(function() {
 	url = next.attr('value');
     loadPageAndSetSelect(url);
   }); 
-  
-  
-<<<<<<< HEAD
-  
-
-  
-  
-  /******Zoom function********/
-  
-  $('#zoomin').on('click',function() {
-
-
-=======
-  /***Zoom function*****/
-  
-  
-  
-
 
 
 $('#zoomin').on('click',function() {
 
-alert("hi");
+	var className = $("#document").attr("class").trim().charAt(5);
 
->>>>>>> f59a239dc72e1693fe1a5452231276e6d42e31f2
-var className = $("#document").attr("class").trim().charAt(5);
+	var zoom_protect=parseInt(className);
 
-var zoom_protect=parseInt(className);
+	if(zoom_protect<=5){
+		var zoom_buffer=zoom_protect+1;
 
-if(zoom_protect<=5){
-var zoom_buffer=zoom_protect+1;
+		var zoom_level=$("#document").attr("class").replace(className,zoom_buffer);
 
-var zoom_level=$("#document").attr("class").replace(className,zoom_buffer);
+		$("#document").removeClass();
+		$("#document").addClass(zoom_level);
 
-$("#document").removeClass();
-$("#document").addClass(zoom_level);
-
-return false;
-}
-
-
+		return false;
+	}
 
 });
 
 $('#zoomout').on('click',function() {
 
-var className = $("#document").attr("class").trim().charAt(5);
+	var className = $("#document").attr("class").trim().charAt(5);
 
-var zoom_protect=parseInt(className);
+	var zoom_protect=parseInt(className);
 
-if(zoom_protect>1){
-var zoom_buffer=zoom_protect-1;
+	if(zoom_protect>1){
+		var zoom_buffer=zoom_protect-1;
 
-var zoom_level=$("#document").attr("class").replace(className,zoom_buffer);
+		var zoom_level=$("#document").attr("class").replace(className,zoom_buffer);
 
-$("#document").removeClass();
-$("#document").addClass(zoom_level);
+		$("#document").removeClass();
+		$("#document").addClass(zoom_level);
 
-return false;
-}
+		return false;
+	}
+  });
 
-
-<<<<<<< HEAD
-
-
-});
-  
-  
-  
-  
-  /******Zoom function********/
-  
-=======
-  /***Zoom function*****/
-
-
-
-
-
->>>>>>> f59a239dc72e1693fe1a5452231276e6d42e31f2
-  
 });
 
 
