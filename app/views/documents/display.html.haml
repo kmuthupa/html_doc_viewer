@@ -1,6 +1,4 @@
 #doc_display
-  %span{:id => 'link_back'}
-    = link_to 'Upload another document', root_url
   - if @loc.blank? || @pages == 0 || @pages.blank?
     #exception
       Sorry. There is a problem displaying this document!
@@ -8,19 +6,25 @@
     #toolbar
       %ul
         %li
-          Jump to Page:
+          %span Jump to Page:
           %select{:id => 'page_select'}
             - for p in (1..@pages)
               %option{:value => "#{fetch_documents_url}?fetch_url=#{CONVERSION_SERVER}/#{@loc}/#{@doc_name}-#{p}.html"}
                 = "#{p}"  
         %li
           = link_to image_tag("prev_page.png", :id => 'prev_page', :size => '30x30'), 'javascript:void'
+        %span
+          Navigate
         %li
           = link_to image_tag("next_page.png", :id => 'next_page', :size => '30x30'), 'javascript:void'
         %li
           = link_to image_tag("zoom_in.png", :id => 'zoomin', :size => '30x30'), 'javascript:void'
+        %span
+          Zoom
         %li
           = link_to image_tag("zoom_out.png", :id => 'zoomout', :size => '30x30'), 'javascript:void'
+        %span{:id => 'link_back'}
+          = link_to 'Upload another document', root_url
     #doc_container
       #spinner
         = image_tag "ajax_spinner.gif", :size => '100x100'

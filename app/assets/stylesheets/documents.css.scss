@@ -25,11 +25,11 @@
     background: #F2F2F2;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    span {font-size: 1.25em;}
     li {
       list-style: none;
       display: inline;
       padding: 0 10px;
-      span,
       #page_select{position:relative;bottom:8px;padding:0 5px}
     }
   }
