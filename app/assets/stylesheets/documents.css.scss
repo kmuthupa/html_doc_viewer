@@ -25,7 +25,9 @@
     background: #F2F2F2;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    span {font-size: 1.25em;}
+    z-index:2000;
+    position:relative;
+    span {font-size: 1.25em;position:relative;bottom:10px;}
     li {
       list-style: none;
       display: inline;
@@ -37,11 +39,16 @@
     -moz-border-radius: 10px;
     border-radius: 10px;
     border: solid 3px #333;
-    padding: 20px;
-    margin: 10px auto;
-    overflow: auto;
+    padding:0;
+    margin:70px auto 0;
+    overflow-y: auto;
+    position:absolute;
+    top:50px;
+   bottom: 0;
+   left: 0;
+   right: 0;
     #document {
-      margin: 10px;
+     
       .page {
          .spinner {
 		    width: 100%;
@@ -90,16 +97,16 @@
 .float_right{float:right}
 .clear{overflow:hidden}
 
-.zoom_1{-moz-transform:scale(0.5);-webkit-transform:scale(0.5);-ms-transform:scale(0.5);-o-transform:scale(0.5); margin:-18% auto 0;}
+.zoom_1{-moz-transform:scale(0.5);-webkit-transform:scale(0.5);-ms-transform:scale(0.5);-o-transform:scale(0.5); margin:-64% auto 0  !important;}
 
-.zoom_2{-moz-transform:scale(0.57);-webkit-transform:scale(0.75);-ms-transform:scale(0.75);-o-transform:scale(0.75);margin:-7% auto 0;}
+.zoom_2{-moz-transform:scale(0.57);-webkit-transform:scale(0.75);-ms-transform:scale(0.75);-o-transform:scale(0.75);margin:-31% auto 0  !important;}
 
 .zoom_3{-moz-transform:scale(1);-webkit-transform:scale(1);-ms-transform:scale(1);-o-transform:scale(1);top:10%;bottom:0;left:0;right:0;margin:30px auto}
 
-.zoom_4{-moz-transform:scale(1.5);-webkit-transform:scale(1.5);-ms-transform:scale(1.5);-o-transform:scale(1.5);margin:22% auto 0}
+.zoom_4{-moz-transform:scale(1.5);-webkit-transform:scale(1.5);-ms-transform:scale(1.5);-o-transform:scale(1.5);margin:72em 0 0 21em !important;}
 
-.zoom_5{-moz-transform:scale(1.7);-webkit-transform:scale(1.7);-ms-transform:scale(1.7);-o-transform:scale(1.7);margin:32% auto 0}
+.zoom_5{-moz-transform:scale(1.7);-webkit-transform:scale(1.7);-ms-transform:scale(1.7);-o-transform:scale(1.7);margin:99em 0 0 28em !important;}
 
-.zoom_6{-moz-transform:scale(2);-webkit-transform:scale(2);-ms-transform:scale(2);-o-transform:scale(2);margin:43% auto 0}
+
 
 

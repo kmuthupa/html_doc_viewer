@@ -44,12 +44,14 @@ body {
 
   #header {
     background: #F2F2F2;
-    padding:10px 10px;
-    margin: 10px;
+    padding:0px 10px;
+    margin: 10px 10px 0;
     -moz-border-radius: 10px;
     border-radius: 10px;
     position:relative;
     border-bottom:1px solid #999;
+    position:relative;
+    z-index:2000;
     
     h1{font-size:2.5em;margin:0 0.1em;line-height:1.5em;text-align:center}
   }
@@ -60,7 +62,7 @@ body {
     #flash_bar {
       font-size: 1.25em;
       color: red;
-      margin: 20px;
+    margin:5px;
     }
   }
 
