@@ -19,16 +19,47 @@ $(document).ready(function() {
   }
   
   
+ /********page jump*********/ 
   
-  
-$("#page_select").change(function(){
+
+
+
+$("#next_page").on('click',function(){
+var pageLimit=$("#page_select").attr("page_count");
+var nextPage=parseInt($("#page_select").val())+1;
+
+if(nextPage<= pageLimit){
+var pageNumber=("#page_"+ nextPage);
+pageScroll(pageNumber);
+$("#page_select").val(nextPage);
+}
+
+});
+
+
+$("#prev_page").on('click',function(){
+var pageLimit=$("#page_select").attr("page_count");
+var prevPage=parseInt($("#page_select").val())-1;
+
+if(prevPage !==0){
+var pageNumber=("#page_"+ prevPage);
+pageScroll(pageNumber);
+$("#page_select").val(prevPage);
+}
+
+});
+
+
+$("#page_select").on('change',function(){
 var pageNumber=("#page_"+$(this).val());
 pageScroll(pageNumber);
+
 });
   
   
 function pageScroll(number){
- $("#doc_container").scrollTo(number,1000,{easing:'esoincub'}	);
+$("#doc_container").scrollTo(number,1000,{easing:'esoincub'}	);
+ return false
 }
 
 $.easing.esoincub = function(x, t, b, c, d) {
@@ -36,7 +67,8 @@ $.easing.esoincub = function(x, t, b, c, d) {
 		return c/2*((t-=2)*t*t + 2) + b;	
 };
 
-  
+
+/********page jump*********/
   
 
 	//   $('#page_select').change(function() {
