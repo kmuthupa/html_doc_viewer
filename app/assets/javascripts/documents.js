@@ -1,8 +1,3 @@
-
-
-
-
-
 $(document).ready(function() {	
 
   if ($('#page_select option:first') != undefined) {
@@ -19,10 +14,7 @@ $(document).ready(function() {
   }
   
   
- /********page jump*********/ 
-  
-
-
+ /********page nav*********/ 
 
 $("#next_page").on('click',function(){
 var pageLimit=$("#page_select").attr("page_count");
@@ -88,6 +80,7 @@ $.easing.esoincub = function(x, t, b, c, d) {
 	//     retrievePageAndSelect(url);
 	//   }); 
 
+ /********zoom********/ 
 
 $('#zoomin').on('click',function() {
 	var className = $("#document").attr("class").trim().charAt(5);
@@ -114,14 +107,6 @@ $('#zoomout').on('click',function() {
   });
 
 });
-
-// // loads the page content and sets the page select list
-// var retrievePageAndSelect = function(url_val) {
-// 	if (url_val != undefined) {
-// 		$('#page_select').val(url_val);
-// 		retrievePage(url_val);
-// 	};
-// }
 
 // loads the content for the specific page using the passed url
 var retrievePage = function (page_url, page_num) {
