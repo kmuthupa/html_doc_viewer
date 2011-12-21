@@ -50,7 +50,9 @@ pageScroll(pageNumber);
   
   
 function pageScroll(number){
-$("#doc_container").scrollTo(number,1000,{easing:'esoincub'}	);
+$("#doc_container").scrollTo(number,1000,{easing:'esoincub',margin:"1000"})
+
+
  return false
 }
 
