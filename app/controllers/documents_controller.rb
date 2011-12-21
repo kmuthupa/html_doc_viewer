@@ -9,7 +9,7 @@ class DocumentsController < ApplicationController
     if params[:document_file] && File.exists?(params[:document_file].tempfile)
       # persist the file
       file_name = params[:document_file].original_filename
-      save_file = File.new("#{Rails.root}/tmp/uploads/#{file_name}", 'w')
+      save_file = File.new("#{Rails.root}/tmp/#{file_name}", 'w')
       File.open(params[:document_file].tempfile, 'r') do |f|
         save_file.write(f.read)
       end
