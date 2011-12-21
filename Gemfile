@@ -6,6 +6,7 @@ gem 'haml', '3.1.2'
 gem 'jquery-rails'
 gem 'rest-client'
 gem 'pg'
+gem 'heroku'
 
 group :development do
   gem "rspec-rails", "~> 2.6"
