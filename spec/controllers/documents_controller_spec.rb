@@ -3,10 +3,20 @@ require 'spec_helper'
 describe DocumentsController do
   render_views
   
-  it 'return a new upload page with success' do
+  it 'return a new upload page with success when service is available' do
+    RestClient.stub!(:get).and_return("hello world") if STUB_CONVERSION
     get :new
     response.should be_success
     response.should render_template(:new)
+    assigns(:service_available).should be_true
+  end
+  
+  it 'return a new upload page with exception when service is not available' do
+    RestClient.stub!(:get).and_return("not found") if STUB_CONVERSION
+    get :new
+    response.should be_success
+    response.should render_template(:new)
+    assigns(:service_available).should be_false
   end
   
   it 'return the upload result page with success' do

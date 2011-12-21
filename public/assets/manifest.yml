@@ -1,10 +1,10 @@
 ---
-ajax_spinner.gif: ajax_spinner-85f4d46d957c59582c8f79ba7a6bb851.gif
-next_page.png: next_page-eefebc60f32b5c9993a96d1dddba5b12.png
-oops.jpg: oops-788244dc475acd858d5204e619f1810a.jpg
-prev_page.png: prev_page-4d4cadfd383869e2c6021abd84f6e1b9.png
-yay.gif: yay-19b2331fcf8064afb78ff2326ca6be5e.gif
-zoom_in.png: zoom_in-d877904e9912d77f3a7c02be4c865f89.png
-zoom_out.png: zoom_out-308d9380082a673ec951381f73acc697.png
-application.js: application-650d792d3a783ec73c8bbbe1d0beb7e4.js
-application.css: application-83afdbbef41f2b8c374f7461aadbab21.css
+ajax_spinner.gif: ajax_spinner.gif
+next_page.png: next_page.png
+oops.jpg: oops.jpg
+prev_page.png: prev_page.png
+yay.gif: yay.gif
+zoom_in.png: zoom_in.png
+zoom_out.png: zoom_out.png
+application.js: application.js
+application.css: application.css

@@ -1,2 +1,347 @@
-*{margin:0;padding:0;font-size:1em;outline:none;font-weight:inherit;font-style:inherit;font-family:inherit;border:none}:focus{outline:0}body{line-height:1.6em;color:black;background-color:transparent}ol,ul{list-style:none}sub,sup{vertical-align:baseline}table{border-collapse:separate;border-spacing:0}caption,th,td{text-align:left;font-weight:normal}blockquote:before,blockquote:after,q:before,q:after{content:" "}blockquote,q{quotes:"\201C""\201D""\2018""\2019";color:#666}blockquote{text-indent:-0.8em}hr{display:none}input,select,button{cursor:pointer}input[type='text'],input[type='password']{cursor:text}input[type='hidden']{display:none}html{font-size:65.2%}html body{line-height:1.6em;font-size:1.2em}body{height:100%;font-family:Gill Sans, Verdana}body #container{margin:0 30px;background:#FFF;height:100%}body #header{background:#F2F2F2;padding:0px 10px;margin:10px 10px 0;-moz-border-radius:10px;border-radius:10px;position:relative;border-bottom:1px solid #999;position:relative;z-index:2000}body #header h1{font-size:2.5em;margin:0 0.1em;line-height:1.5em;text-align:center}body #content{width:100%;clear:left}body #content #flash_bar{font-size:1.25em;color:red;margin:5px}body #content h2{font-size:160%;margin:0 0 .5em;color:#606060}body #footer{background:#606060;text-align:right;padding:20px;height:1%}
-#result{width:50%;border:solid 3px #e1eae6;-moz-border-radius:10px;border-radius:10px;margin-left:auto;margin-right:auto;padding:15px}#result h2{font-size:2.5em;font-weight:bold}#result h3{font-size:1.75em}#doc_display span#link_back{font-size:1.5em}#doc_display #exception{margin-top:15px;padding-top:10px;font-size:1.75em;color:red}#doc_display #toolbar{margin:5px;padding:8px 15px 5px;background:#F2F2F2;-moz-border-radius:5px;border-radius:5px;z-index:2000;position:relative;top:1.5em}#doc_display #toolbar span{font-size:1.25em;position:relative;bottom:10px}#doc_display #toolbar li{list-style:none;display:inline;padding:0 10px}#doc_display #toolbar li #page_select{position:relative;bottom:8px;padding:0 5px}#doc_display #doc_container{-moz-border-radius:10px;border-radius:10px;border:solid 3px #333;padding:0;margin:70px auto 0;overflow-y:auto;position:absolute;top:0;bottom:0;left:0;right:0;z-index:0}#doc_display #doc_container #document .page{display:none;border:solid 2px #999;margin:20px;padding:10px}#doc_display #doc_container #document .page .spinner{width:100%;height:100%;padding:0;margin:0;text-align:center}#upload_form{margin-left:auto;margin-right:auto;margin-top:50px;padding-left:20px;padding-right:20px;padding-top:10px;padding-bottom:10px;width:50%;height:125px;border:solid 3px #e1eae6;-moz-border-radius:10px;border-radius:10px}#upload_form input#document_file{width:300px}#upload_form input{color:#606060;padding-left:20px;padding-right:20px;padding-top:5px;padding-bottom:5px;font-size:1.0em}#page_sink{display:none}.float_left{float:left}.float_right{float:right}.clear{overflow:hidden}.zoom_1{-moz-transform:scale(0.5);-webkit-transform:scale(0.5);-ms-transform:scale(0.5);-o-transform:scale(0.5);margin:-60% auto 0 !important}.zoom_2{-moz-transform:scale(0.57);-webkit-transform:scale(0.75);-ms-transform:scale(0.75);-o-transform:scale(0.75);margin:-28% auto 0 !important}.zoom_3{-moz-transform:scale(1);-webkit-transform:scale(1);-ms-transform:scale(1);-o-transform:scale(1);top:10%;bottom:0;left:0;right:0;margin:65px auto}.zoom_4{-moz-transform:scale(1.5);-webkit-transform:scale(1.5);-ms-transform:scale(1.5);-o-transform:scale(1.5);margin:75em 0 0 21em !important}.zoom_5{-moz-transform:scale(1.7);-webkit-transform:scale(1.7);-ms-transform:scale(1.7);-o-transform:scale(1.7);margin:103em 0 0 28em !important}
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+*/
+/***********************Reset CSS************************/
+/* line 10, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  outline: none;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  border: none;
+}
+
+/* focusing styles are applied below */
+/* line 12, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+:focus {
+  outline: 0;
+}
+
+/* line 13, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+body {
+  line-height: 1.6em;
+  color: black;
+  background-color: transparent;
+}
+
+/* line 14, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 15, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+sub, sup {
+  vertical-align: baseline;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+/* line 17, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* line 18, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+/* line 20, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: " ";
+}
+
+/* line 21, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+blockquote, q {
+  quotes: "\201C""\201D""\2018""\2019";
+  color: #666;
+}
+
+/* line 22, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+blockquote {
+  text-indent: -0.8em;
+}
+
+/* line 23, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+hr {
+  display: none;
+}
+
+/* line 24, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+input, select, button {
+  cursor: pointer;
+}
+
+/* line 25, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+input[type='text'], input[type='password'] {
+  cursor: text;
+}
+
+/* line 26, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+input[type='hidden'] {
+  display: none;
+}
+
+/* line 27, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+html {
+  font-size: 65.2%;
+}
+/* line 28, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+html body {
+  line-height: 1.6em;
+  font-size: 1.2em;
+}
+
+/***********************Reset CSS************************/
+/* line 34, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+body {
+  height: 100%;
+  font-family: Gill Sans, Verdana;
+}
+/* line 38, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+body #container {
+  margin: 0 30px;
+  background: #FFF;
+  height: 100%;
+}
+/* line 44, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+body #header {
+  background: #F2F2F2;
+  padding: 0px 10px;
+  margin: 10px 10px 0;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  position: relative;
+  border-bottom: 1px solid #999;
+  position: relative;
+  z-index: 2000;
+}
+/* line 55, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+body #header h1 {
+  font-size: 2.5em;
+  margin: 0 0.1em;
+  line-height: 1.5em;
+  text-align: center;
+}
+/* line 58, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+body #content {
+  width: 100%;
+  height: 70%;
+  clear: left;
+}
+/* line 62, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+body #content #flash_bar {
+  font-size: 1.25em;
+  color: red;
+  margin: 5px;
+}
+/* line 69, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+body #content h2 {
+  font-size: 160%;
+  margin: 0 0 .5em;
+  color: #606060;
+}
+/* line 75, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+body #footer {
+  text-align: center;
+  padding: 10px;
+  height: 1%;
+  font-size: 1.25em;
+}
+/* line 82, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/application.css.scss */
+body #exception {
+  margin-top: 15px;
+  padding-top: 10px;
+  font-size: 1.75em;
+  color: red;
+  text-align: center;
+}
+/* line 1, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/documents.css.scss */
+#result {
+  width: 50%;
+  border: solid 3px #e1eae6;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding: 15px;
+}
+/* line 10, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/documents.css.scss */
+#result h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+/* line 12, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/documents.css.scss */
+#result h3 {
+  font-size: 1.75em;
+}
+
+/* line 16, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/documents.css.scss */
+#doc_display span#link_back {
+  font-size: 1.5em;
+}
+/* line 17, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/documents.css.scss */
+#doc_display #toolbar {
+  margin: 5px;
+  padding: 8px 15px 5px;
+  background: #F2F2F2;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  z-index: 2000;
+  position: relative;
+  top: 1.5em;
+}
+/* line 26, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/documents.css.scss */
+#doc_display #toolbar span {
+  font-size: 1.25em;
+  position: relative;
+  bottom: 10px;
+}
+/* line 27, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/documents.css.scss */
+#doc_display #toolbar li {
+  list-style: none;
+  display: inline;
+  padding: 0 10px;
+}
+/* line 31, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/documents.css.scss */
+#doc_display #toolbar li #page_select {
+  position: relative;
+  bottom: 8px;
+  padding: 0 5px;
+}
+/* line 34, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/documents.css.scss */
+#doc_display #doc_container {
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: solid 3px #333;
+  padding: 0;
+  margin: 70px auto 0;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+/* line 49, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/documents.css.scss */
+#doc_display #doc_container #document .page {
+  display: none;
+  border: solid 2px #999;
+  margin: 20px;
+  padding: 10px;
+}
+/* line 50, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/documents.css.scss */
+#doc_display #doc_container #document .page .spinner {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+/* line 66, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/documents.css.scss */
+#upload_form {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 50%;
+  height: 125px;
+  border: solid 3px #e1eae6;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+/* line 79, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/documents.css.scss */
+#upload_form input#document_file {
+  width: 300px;
+}
+/* line 82, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/documents.css.scss */
+#upload_form input {
+  color: #606060;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 1.0em;
+}
+
+/* line 92, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/documents.css.scss */
+#page_sink {
+  display: none;
+}
+
+/* line 93, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/documents.css.scss */
+.float_left {
+  float: left;
+}
+
+/* line 94, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/documents.css.scss */
+.float_right {
+  float: right;
+}
+
+/* line 95, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/documents.css.scss */
+.clear {
+  overflow: hidden;
+}
+
+/* line 97, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/documents.css.scss */
+.zoom_1 {
+  -moz-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  margin: -60% auto 0 !important;
+}
+
+/* line 99, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/documents.css.scss */
+.zoom_2 {
+  -moz-transform: scale(0.57);
+  -webkit-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  -o-transform: scale(0.75);
+  margin: -28% auto 0 !important;
+}
+
+/* line 101, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/documents.css.scss */
+.zoom_3 {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  top: 10%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 65px auto;
+}
+
+/* line 103, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/documents.css.scss */
+.zoom_4 {
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  margin: 75em 0 0 21em !important;
+}
+
+/* line 105, /Users/karthik/Projects/html_doc_viewer/app/assets/stylesheets/documents.css.scss */
+.zoom_5 {
+  -moz-transform: scale(1.7);
+  -webkit-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  -o-transform: scale(1.7);
+  margin: 103em 0 0 28em !important;
+}

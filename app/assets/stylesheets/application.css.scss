@@ -58,6 +58,7 @@ body {
 
   #content {
     width:100%;
+    height: 70%;
     clear: left;
     #flash_bar {
       font-size: 1.25em;
@@ -73,10 +74,18 @@ body {
   }
 
   #footer {
-    background: #606060;
-    text-align: right;
-    padding: 20px;
+    text-align: center;
+    padding: 10px;
     height: 1%;
+    font-size: 1.25em;
+  }
+
+  #exception {
+    margin-top: 15px;
+    padding-top: 10px;
+    font-size: 1.75em; 
+    color: red;
+    text-align: center;
   }
 }
 

@@ -1,8 +1,12 @@
-#upload_form
-  = form_tag '/documents/upload', :multipart => true do |f| 
-    %h2
-      CHOOSE A PDF DOCUMENT AND HIT UPLOAD!
-    = file_field_tag 'document_file', :accept => 'application/pdf'
-    = submit_tag 'UPLOAD'
+- if @service_available 
+  #upload_form
+    = form_tag '/documents/upload', :multipart => true do |f| 
+      %h2
+        CHOOSE A PDF DOCUMENT AND HIT UPLOAD!
+      = file_field_tag 'document_file', :accept => 'application/pdf'
+      = submit_tag 'UPLOAD'
+- else
+  #exception
+    Sorry. The conversion service is not available at this time! Check back later.
 
 
