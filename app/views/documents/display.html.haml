@@ -3,29 +3,29 @@
     #exception
       Sorry. There is a problem displaying this document!
   - else
+    #toolbar
+      %ul
+        %li
+          %span Jump to Page:
+          %select{:id => 'page_select', :url => "#{fetch_documents_url}?fetch_url=#{CONVERSION_SERVER}/#{@loc}/#{@doc_name}", :page_count => @pages}
+            - for p in (1..@pages)
+              %option
+                = "#{p}"  
+        %li
+          = link_to image_tag("prev_page.png", :id => 'prev_page', :size => '30x30'), 'javascript:void'
+        %span
+          Navigate
+        %li
+          = link_to image_tag("next_page.png", :id => 'next_page', :size => '30x30'), 'javascript:void'
+        %li
+          = link_to image_tag("zoom_in.png", :id => 'zoomin', :size => '30x30'), 'javascript:void'
+        %span
+          Zoom
+        %li
+          = link_to image_tag("zoom_out.png", :id => 'zoomout', :size => '30x30'), 'javascript:void'
+        %span{:id => 'link_back'}
+          = link_to 'Upload another document', root_url
     #doc_container
-      #toolbar
-        %ul
-          %li
-            %span Jump to Page:
-            %select{:id => 'page_select', :url => "#{fetch_documents_url}?fetch_url=#{CONVERSION_SERVER}/#{@loc}/#{@doc_name}", :page_count => @pages}
-              - for p in (1..@pages)
-                %option
-                  = "#{p}"  
-          %li
-            = link_to image_tag("prev_page.png", :id => 'prev_page', :size => '30x30'), 'javascript:void'
-          %span
-            Navigate
-          %li
-            = link_to image_tag("next_page.png", :id => 'next_page', :size => '30x30'), 'javascript:void'
-          %li
-            = link_to image_tag("zoom_in.png", :id => 'zoomin', :size => '30x30'), 'javascript:void'
-          %span
-            Zoom
-          %li
-            = link_to image_tag("zoom_out.png", :id => 'zoomout', :size => '30x30'), 'javascript:void'
-          %span{:id => 'link_back'}
-            = link_to 'Upload another document', root_url
       #document{:class => "zoom_3"}
 
 
