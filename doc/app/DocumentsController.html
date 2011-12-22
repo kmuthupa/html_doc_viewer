@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>Class: DocumentsController</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/documents_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="ApplicationController.html">ApplicationController</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-display">#display</a>
+    
+    <li><a href="#method-i-fetch">#fetch</a>
+    
+    <li><a href="#method-i-new">#new</a>
+    
+    <li><a href="#method-i-result">#result</a>
+    
+    <li><a href="#method-i-upload">#upload</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./DocumentsController.html">DocumentsController</a>
+  
+    <li><a href="./DocumentsHelper.html">DocumentsHelper</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class DocumentsController</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-display" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">display</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="display-source">
+            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">display</span>
+  <span class="ruby-ivar">@doc_name</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:doc_name</span>].<span class="ruby-identifier">gsub</span>(<span class="ruby-string">'.pdf'</span>, <span class="ruby-string">''</span>)
+  <span class="ruby-ivar">@loc</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:loc</span>]
+  <span class="ruby-ivar">@pages</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:pages</span>].<span class="ruby-identifier">to_i</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- display-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- display-method -->
+
+    
+      <div id="method-i-fetch" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">fetch</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="fetch-source">
+            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fetch</span>
+  <span class="ruby-keyword">begin</span> 
+    <span class="ruby-ivar">@resp</span> = <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">get</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:fetch_url</span>] 
+  <span class="ruby-keyword">rescue</span> 
+    <span class="ruby-ivar">@resp</span> = <span class="ruby-string">''</span> 
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- fetch-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- fetch-method -->
+
+    
+      <div id="method-i-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
+   <span class="ruby-ivar">@service_available</span> = <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">get</span>(<span class="ruby-constant">CONVERSION_SERVER</span>) <span class="ruby-operator">==</span> <span class="ruby-string">&quot;hello world&quot;</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">true</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+      <div id="method-i-result" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">result</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="result-source">
+            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- result-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- result-method -->
+
+    
+      <div id="method-i-upload" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">upload</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="upload-source">
+            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">upload</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:document_file</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:document_file</span>].<span class="ruby-identifier">tempfile</span>)
+    <span class="ruby-comment"># persist the file</span>
+    <span class="ruby-identifier">file_name</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:document_file</span>].<span class="ruby-identifier">original_filename</span>
+    <span class="ruby-identifier">save_file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;#{Rails.root}/tmp/#{file_name}&quot;</span>, <span class="ruby-string">'w'</span>)
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:document_file</span>].<span class="ruby-identifier">tempfile</span>, <span class="ruby-string">'r'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">save_file</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">f</span>.<span class="ruby-identifier">read</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">save_file</span>.<span class="ruby-identifier">close</span>
+    <span class="ruby-identifier">save_file_name</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">save_file</span>.<span class="ruby-identifier">path</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\s+/</span>, <span class="ruby-string">&quot;&quot;</span>)
+    <span class="ruby-comment"># upload the file to the sinatra conversion service</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-ivar">@conversion_response</span> = <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">post</span> <span class="ruby-node">&quot;#{CONVERSION_SERVER}/#{save_file_name}&quot;</span>, <span class="ruby-value">:data</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;#{save_file.path}&quot;</span>)       
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@conversion_response</span>.<span class="ruby-identifier">code</span> <span class="ruby-operator">==</span> <span class="ruby-value">200</span>
+        <span class="ruby-ivar">@doc_name</span> = <span class="ruby-identifier">save_file_name</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@conversion_response</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:body</span>)
+          <span class="ruby-identifier">resp</span> = <span class="ruby-ivar">@conversion_response</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">':'</span>)
+          <span class="ruby-ivar">@loc</span> = <span class="ruby-identifier">resp</span>[<span class="ruby-value">0</span>]
+          <span class="ruby-ivar">@pages</span> = <span class="ruby-identifier">resp</span>[<span class="ruby-value">1</span>]
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ex</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;The conversion service is unavailable or not responding at the moment! Exception info: #{ex.message} #{ex.backtrace.inspect}&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> {<span class="ruby-identifier">render</span> <span class="ruby-string">'result'</span>}
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">'No file was chosen!'</span>
+    <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> {<span class="ruby-identifier">render</span> <span class="ruby-string">'new'</span>}
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- upload-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- upload-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
